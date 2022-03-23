@@ -1,0 +1,10 @@
+<h1><%= @project.name %></h1>
+<h4>"<%= @project.number %>"</h4><br>
+<%= link_to "Add a New task",  new_task_path, class:  "btn btn-success" %><hr>
+<% if @project.tasks.present? %>
+<h2> Total Tasks: <%= @project.tasks.count %> </h2>
+<% @project.tasks.each do |task| %>
+<p> Task Name <%= task.name %></p>
+<p> Task Number <%= task.number %></p>
+<% end %>
+<% end %>

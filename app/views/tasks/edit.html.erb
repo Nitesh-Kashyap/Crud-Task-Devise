@@ -1,0 +1,7 @@
+<h3>Update task Details</h3>
+<%= form_with model: @task do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :number, placeholder: "number" %>
+  <%= form.text_field :project_id, placeholder: "project_id" %>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,8 @@
+<table>
+<h3>Create a Project</h3>
+<%= form_with model: @project do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :number, placeholder: "number" %>
+  <%= form.submit %>
+<% end %>
+</table>

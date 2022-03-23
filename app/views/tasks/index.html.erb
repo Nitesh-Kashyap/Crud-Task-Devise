@@ -1,0 +1,9 @@
+<table>
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= link_to task.name, task_path(task) %></td>
+      <td><%= button_to 'Edit', edit_task_path(task), method: 'get'%></td>
+      <td><%= button_to 'Remove', task_path(task), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</table>
+<%= link_to "Add a New task", new_task_path %>

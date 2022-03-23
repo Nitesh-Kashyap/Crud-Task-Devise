@@ -1,0 +1,15 @@
+<h3>Create a task</h3>
+<% if @task.errors.any? %>
+  <% @task.errors.full_messages.each do |message|%>
+  <p class="text-danger"><%= message %></p>
+  <%end%>
+<%end%>
+<%= form_with model: @task do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :number, placeholder: "number" %>
+  <%= form.select(:project_ids, options_for_select(Project.pluck(:name, :id)), { prompt: "Select Project", include_hidden: false }, { required: true }) %>
+
+
+
+  <%= form.submit %>
+<% end %>

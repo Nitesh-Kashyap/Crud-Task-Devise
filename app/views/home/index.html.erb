@@ -1,0 +1,8 @@
+<h1>Welcome to Nitesh Crud Operation for Project and Tasks</h1>
+<%= link_to "Add a New project", new_project_path, class: "btn btn-lg btn-success" %>
+<%= link_to "Add a New task", new_task_path, class: "btn btn-lg btn-success" %><hr>
+<h2><%= link_to "Total Project Count -  #{Project.count}", projects_path %></h2>
+<h2><%= link_to "Total Task Count -  #{Task.count}", tasks_path %></h2>
+
+
+
